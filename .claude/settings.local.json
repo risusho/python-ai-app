@@ -4,7 +4,20 @@
       "Bash(.venv/Scripts/python.exe -m ruff check .)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git status *)"
+      "Bash(git status *)",
+      "Bash(mkdir -p 'C:/Users/Yuta/OneDrive/デスクトップ/Claude Code Tutorial/python-ai-app/../scratch_no_env_test')",
+      "Read(//c/Users/Yuta/OneDrive/デスクトップ/Claude Code Tutorial/**)",
+      "Bash('C:/Users/Yuta/OneDrive/デスクトップ/Claude Code Tutorial/python-ai-app/.venv/Scripts/python.exe' -X utf8 -c ' *)",
+      "Read(//c/Users/Yuta/OneDrive/デスクトップ/Claude Code Tutorial/scratch_no_env_test/**)",
+      "Bash('C:/Users/Yuta/OneDrive/デスクトップ/Claude Code Tutorial/python-ai-app/.venv/Scripts/python.exe' -c 'import os; print\\(os.path.abspath\\(r'\\\\''C:/Users/Yuta/OneDrive/デスクトップ/Claude Code Tutorial/python-ai-app/../scratch_no_env_test/debug_app.py'\\\\''\\)\\); print\\(os.path.exists\\(r'\\\\''C:/Users/Yuta/OneDrive/デスクトップ/Claude Code Tutorial/python-ai-app/../scratch_no_env_test/debug_app.py'\\\\''\\)\\)')",
+      "Bash(mkdir -p 'C:/Users/Yuta/OneDrive/デスクトップ/Claude Code Tutorial/python-ai-app/../scratch2')",
+      "Read(//c/Users/Yuta/OneDrive/デスクトップ/Claude Code Tutorial/scratch2/**)",
+      "Bash(netstat -ano)",
+      "Bash(powershell -Command \"Get-Process -Id 26552 | Select-Object Id, StartTime\")",
+      "Bash(powershell -Command \"Get-Item 'app.py','utils\\\\ui.py','utils\\\\gemini_client.py' | Select-Object Name, LastWriteTime\")",
+      "Bash(curl -s http://localhost:8501 -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(.venv/Scripts/python.exe -m py_compile app.py utils/ui.py utils/gemini_client.py)",
+      "Bash(gh api *)"
     ]
   }
 }
