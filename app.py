@@ -2,16 +2,19 @@ import streamlit as st
 
 from utils.gemini_client import get_api_key
 from utils.history import load_history
+from utils.ui import render_common_sidebar
 
 st.set_page_config(page_title="AI ライティングツール", page_icon="✍️", layout="wide")
+
+render_common_sidebar()
 
 st.title("✍️ AI ライティングツール")
 st.caption("Gemini APIを使った個人用ライティング支援ツール")
 
 if not get_api_key():
     st.warning(
-        "GEMINI_API_KEY が設定されていません。プロジェクト直下に `.env` ファイルを作成し、"
-        "`GEMINI_API_KEY=あなたのAPIキー` を記載してください(`.env.example` を参考にしてください)。"
+        "Gemini APIキーが設定されていません。左のサイドバーにご自身のAPIキーを入力してください。"
+        "キーは https://aistudio.google.com/apikey から無料で取得できます。"
     )
 
 st.markdown("### 機能一覧")

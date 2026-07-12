@@ -14,6 +14,9 @@ AVAILABLE_MODELS = ["gemini-2.5-flash", "gemini-2.5-pro", "gemini-3.5-flash"]
 
 
 def get_api_key() -> str | None:
+    user_key = st.session_state.get("user_api_key")
+    if user_key:
+        return user_key
     return os.environ.get("GEMINI_API_KEY")
 
 
@@ -25,7 +28,7 @@ def _get_client(api_key: str) -> genai.Client:
 def generate_text(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.7) -> str:
     api_key = get_api_key()
     if not api_key:
-        raise RuntimeError("GEMINI_API_KEYが設定されていません。.envファイルにAPIキーを設定してください。")
+        raise RuntimeError("APIキーが設定されていません。サイドバーにGemini APIキーを入力してください。")
 
     client = _get_client(api_key)
     response = client.models.generate_content(
